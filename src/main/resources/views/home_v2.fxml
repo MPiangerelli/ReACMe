@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="449.0" prefWidth="472.0" styleClass="vbox-content" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css">
+         <children>
+            <BorderPane prefHeight="79.0" prefWidth="440.0" styleClass="header-border-pane" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css">
+               <left>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="header-title" text="Log Analyzer" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font>
+                  </Text>
+               </left>
+               <right>
+                  <Button mnemonicParsing="false" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css" text="Import Directory" BorderPane.alignment="CENTER">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                     </styleClass>
+                     <font>
+                        <Font name="Segoe UI Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </right>
+               <bottom>
+                  <VBox alignment="CENTER_LEFT" minHeight="48.0" prefHeight="48.0" styleClass="vbox-auto-height" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css" BorderPane.alignment="BOTTOM_LEFT">
+                     <children>
+                        <Label styleClass="descriptor" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css" text="Properties" />
+                        <Separator />
+                     </children>
+                  </VBox>
+               </bottom>
+            </BorderPane>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Gamma" />
+                  <Label text="Grams" GridPane.rowIndex="1" />
+                  <Label text="Do you want to change score settings?" GridPane.rowIndex="2" />
+                  <TextField styleClass="input" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css" GridPane.columnIndex="1" />
+                  <TextField styleClass="input" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ChoiceBox prefHeight="15.0" prefWidth="224.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <VBox alignment="BOTTOM_LEFT" minHeight="48.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="48.0" prefWidth="0.0" styleClass="vbox-auto-height" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css">
+               <children>
+                  <Label styleClass="descriptor" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css" text="Score Settings" />
+                  <Separator />
+               </children>
+            </VBox>
+            <GridPane hgap="16.0" prefHeight="130.0" prefWidth="440.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="descriptor" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css" text="Nodes" />
+                  <Label styleClass="descriptor" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css" text="Edges" GridPane.columnIndex="1" />
+                  <TextField promptText="Equal Score" GridPane.rowIndex="1" />
+                  <TextField promptText="Equal Score" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField promptText="SemiEqual Score" GridPane.rowIndex="2" />
+                  <TextField promptText="Not Equal Score" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField promptText="Semi Equal Score" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField promptText="Not Equal Score" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <Separator prefHeight="34.0" prefWidth="440.0" />
+            <BorderPane prefHeight="62.0" prefWidth="440.0">
+               <left>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="No .xes files loaded" BorderPane.alignment="CENTER" />
+               </left>
+               <right>
+                  <Button mnemonicParsing="false" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css" text="Start Mining" BorderPane.alignment="CENTER">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                     </styleClass>
+                  </Button>
+               </right>
+            </BorderPane>
+         </children>
+      </VBox>
+      <VBox prefHeight="472.0" prefWidth="325.0" styleClass="vbox-content" stylesheets="@../../../../../../Log%20Analyzer%20UI/v2.0/css/version1.css">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Console Output" wrappingWidth="125.26019287109375">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="16.0" top="32.0" />
+               </VBox.margin>
+            </Text>
+            <TextArea editable="false" prefHeight="396.0" prefWidth="294.0" />
+         </children>
+      </VBox>
+   </children>
+</HBox>
